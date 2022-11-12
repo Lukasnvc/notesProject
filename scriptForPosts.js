@@ -92,10 +92,11 @@ users.forEach(element => {
   }
 });
 }
-
+let index = 0;
 const draw = (user) => {
   const userPostsArr = JSON.parse(user.post) || []
-  userPostsArr.forEach(element => {
+  
+  userPostsArr.forEach((element, index) => {
     const div = document.createElement('div');
     const deleteBtn = document.createElement('button');
     deleteBtn.setAttribute('class', 'deleteBtn');
@@ -104,7 +105,10 @@ const draw = (user) => {
     div.textContent=element;
     div.appendChild(deleteBtn)
     container.appendChild(div)
-    
+    deleteBtn.addEventListener('click', () => {
+      
+      deleteOne(index, user)
+    })
   });
 
 }
@@ -124,4 +128,12 @@ postBtn.addEventListener('click', (e) => {
   postForm.style.display = 'none';
   newPostBtn.style.display = 'block';
 })
+}
+
+const deleteOne = (index, item) => {
+  const postsArr = JSON.parse(item.post) || []
+  postsArr.splice(index, 1);
+  const jsonPostsArr = JSON.stringify(postsArr)
+  sendUppdatedPosts(item.username, id, jsonPostsArr)
+  
 }
