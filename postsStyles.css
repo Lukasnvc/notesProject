@@ -34,9 +34,9 @@ body header #logout:hover {
 }
 body #newpost {
   display: none;
-  padding: 50px;
+  padding: 40px;
   position: relative;
-  background-color: rgb(105, 105, 224);
+  background-color: rgb(185, 155, 155);
   border-radius: 10px;
 }
 body #newpost #close {
@@ -45,23 +45,26 @@ body #newpost #close {
   right: 10px;
 }
 body #newpost h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
-  margin: 30px;
+  margin: 0;
+  margin-bottom: 30px;
 }
 body #newpost form {
   display: flex;
   flex-direction: column;
 }
-body #newpost form input {
-  margin: 20px;
-}
-body #newpost form label {
-  text-align: center;
-  font-style: italic;
-}
 body #newpost form #newPost {
-  height: 300px;
+  height: 100px;
+}
+body #newpost form #submit {
+  background-color: rgb(105, 105, 224);
+  color: white;
+  font-size: 1.3rem;
+  padding: 20px;
+  margin-top: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 body #posts {
   padding: 30px;
@@ -71,9 +74,24 @@ body #posts {
   margin: 0 auto;
 }
 body #posts .card {
+  position: relative;
   margin-top: 10px;
-  padding: 20px;
+  padding: 40px;
   background-color: whitesmoke;
   border: 2px solid rgb(105, 105, 224);
   border-radius: 5px;
+}
+body #posts .card .deleteBtn {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: rgb(243, 140, 140);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  font-size: 0.6rem;
+}
+body #posts .card .deleteBtn:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=postsStyles.css.map */

@@ -96,10 +96,13 @@ users.forEach(element => {
 const draw = (user) => {
   const userPostsArr = JSON.parse(user.post) || []
   userPostsArr.forEach(element => {
-    console.log('Drawing in forEach : ',element)
     const div = document.createElement('div');
+    const deleteBtn = document.createElement('button');
+    deleteBtn.setAttribute('class', 'deleteBtn');
+    deleteBtn.textContent= 'Delete';
     div.setAttribute('class', 'card');
     div.textContent=element;
+    div.appendChild(deleteBtn)
     container.appendChild(div)
     
   });
@@ -119,5 +122,6 @@ postBtn.addEventListener('click', (e) => {
   const jsonPostsArr = JSON.stringify(postsArr)
   sendUppdatedPosts(item.username, id, jsonPostsArr)
   postForm.style.display = 'none';
+  newPostBtn.style.display = 'block';
 })
 }
