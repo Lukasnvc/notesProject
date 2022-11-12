@@ -1,0 +1,92 @@
+body {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:rgb(57, 52, 52);
+
+  header {
+    margin: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(107, 107, 107);
+    padding-bottom: 20px;
+
+    h2 {
+      margin: 20px;
+    }
+    #newPostBtn {
+      background-color: rgb(105, 105, 224);
+      color: white;
+      border: 1px solid black;
+      border-bottom-right-radius: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    #logout {
+      background-color: rgb(243, 140, 140);
+      padding: 0 20px;
+      color: white;
+      border: 1px solid black;
+      border-bottom-left-radius: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  #newpost {
+    display: none;
+    padding: 50px;
+    position: relative;
+    background-color: rgb(105, 105, 224);
+    border-radius: 10px;
+    
+    #close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        margin: 20px;
+      }
+
+      label {
+        text-align: center;
+        font-style: italic;
+      }
+
+      #newPost {
+        height: 300px;
+      }
+    }
+  }
+
+  #posts {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 4%;
+    margin: 0 auto;
+
+    .card {
+      margin-top: 10px;
+      padding: 20px;
+      background-color: whitesmoke;
+      border: 2px solid rgb(105, 105, 224);
+      border-radius: 5px;
+    }
+  }
+}

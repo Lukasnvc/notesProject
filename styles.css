@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+}
+* body {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(112, 112, 112);
+}
+* body header {
+  display: flex;
+  padding: 10px;
+  background-color: rgb(147, 108, 108);
+}
+* body header h1 {
+  margin-left: 10px;
+  color: rgb(29, 29, 29);
+}
+* body header p {
+  font-size: 0.6rem;
+}
+* body #login form {
+  margin: 30px 20px;
+}
+* body #login input {
+  margin-right: 10px;
+  background-color: rgb(112, 112, 112);
+  border: none;
+  border-bottom: 3px dotted rgb(96, 63, 63);
+  width: 100px;
+}
+* body #login input:hover {
+  cursor: text;
+}
+* body #login button {
+  padding: 10px;
+  margin: 10px;
+}
+* body #login button:hover {
+  cursor: pointer;
+}
+* body #login #submit1 {
+  border-radius: 5px;
+  border-bottom-left-radius: 20px;
+  padding: 10px 20px;
+  background-color: rgb(147, 108, 108);
+  color: rgb(195, 195, 195);
+}
+* body #login #registerBtn {
+  border-radius: 5px;
+  border-top-right-radius: 20px;
+  background-color: rgb(137, 75, 75);
+  color: rgb(195, 195, 195);
+}
+* body #login #error {
+  color: rgb(128, 3, 3);
+  padding: 20px;
+}
+* body #register {
+  display: none;
+  width: 500px;
+  position: absolute;
+  border: 1px solid rgb(137, 75, 75);
+  border-radius: 10px;
+  padding: 50px;
+  top: 50px;
+  left: 50px;
+  background-color: rgb(102, 94, 94);
+}
+* body #register input {
+  background-color: rgb(166, 166, 166);
+}
+* body #register #close {
+  position: absolute;
+  left: 550px;
+  top: 20px;
+  background-color: rgb(112, 112, 112);
+}
+* body #register form {
+  display: flex;
+  flex-direction: column;
+}
+* body #register form input {
+  margin: 10px 0;
+}
+* body #register #submit {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgb(147, 108, 108);
+  font-size: 1.2rem;
+}/*# sourceMappingURL=styles.css.map */

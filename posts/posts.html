@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Posts</title>
+  <script defer src="scriptForPosts.js"></script>
+  <link rel="stylesheet" href="postsStyles.css">
+
+</head>
+<body>
+
+  <header>
+    <button id="newPostBtn">Make a New Post</button>
+    <h2 id="h2">Here's your notes :)</h2>
+    <button id="logout">Logout</button>
+  </header>
+ 
+  <div id="newpost">
+    <button id="close">X</button>
+    <h1>It's time for a new post</h1>
+    <form id="newPostForm">
+      <label for="post">Write something :)</label>
+        <input type="text" name="post" id="newPost">
+      <button id="submit">Store post</button>
+    </form>
+  </div>
+  <div id="posts"></div>
+  
+</body>
+</html>
+
