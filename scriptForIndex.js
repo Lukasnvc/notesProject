@@ -53,7 +53,7 @@ const h3 = document.querySelector('#registerH3');
       if (element.username===user){
         console.log(element)
         pushUser(element);
-        location.href = 'posts/posts.html';
+        location.href = 'posts.html';
       } else {
         loginPassword.value='';
         error.textContent= "Wrong password or no such user"

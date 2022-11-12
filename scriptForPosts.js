@@ -9,7 +9,7 @@ const container = document.querySelector('#posts');
 
 logout.addEventListener('click', () => {
   localStorage.clear();
-  location.href = '../index.html';
+  location.href = 'index.html';
 })
 
 newPostBtn.addEventListener('click', () => {
