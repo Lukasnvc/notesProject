@@ -97,7 +97,7 @@ users.forEach(element => {
 let index = 0;
 const draw = (user) => {
   const userPostsArr = JSON.parse(user.post) || []
-  count.textContent =`Total Note's : ${userPostsArr.length}`;
+  count.textContent =`Total Notes : ${userPostsArr.length}`;
   userPostsArr.forEach((element, index) => {
     const div = document.createElement('div');
     const deleteBtn = document.createElement('button');

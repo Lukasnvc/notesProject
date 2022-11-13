@@ -3,6 +3,8 @@ const loginPassword = document.querySelector('#passwordLogin');
 const loginBtn = document.querySelector('#submit1');
 const login = document.querySelector('#login');
 const error = document.querySelector('#error');
+const userCount = document.querySelector('#userCount');
+
 
 // Register
 const registerBtn = document.querySelector('#registerBtn');
@@ -35,13 +37,16 @@ const h3 = document.querySelector('#registerH3');
       return data.data
     }).then(users => {
       console.log(users)
+      count(users)
       checkUser(users)
     } )
   }
   
   getUser()
 
- 
+  const count = (users) => {
+    userCount.textContent= `Registered users : ${users.length}`;
+  }
 
   const checkUser = (data) => {
   loginBtn.addEventListener('click', (e) => {

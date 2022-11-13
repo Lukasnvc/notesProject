@@ -13,19 +13,35 @@ body {
       position: absolute;
       top: -10px;
       display: flex;
+      justify-content: space-between;
       padding: 10px;
       width: 100%;
       background-color: rgb(147, 108, 108);  
       border-bottom-left-radius: 40px;
 
-      h1{
-        margin-left: 50px;
-        color: rgb(29, 29, 29);
-       
+      .logo {
+        display: flex;
+     
+        h1{
+          margin-left: 50px;
+          color: rgb(29, 29, 29);
+        
+        }
+
+        p {
+          font-size: 0.6rem;
+        }
       }
 
-      p {
-        font-size: 0.6rem;
+      #userCount {
+        position: absolute;
+        padding: 5px 10px;
+        right: 30px;
+        top: 30px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        border: 2px solid rgb(29, 29, 29);
+        border-bottom-left-radius: 15px;
       }
     }
 
@@ -101,6 +117,8 @@ body {
 
     #register {
       display: none;
+      background-image: url('sticky.png');
+      background-size: cover;
       width: 500px;
       position: absolute;
       border: 1px solid rgb(137, 75, 75);
@@ -110,23 +128,63 @@ body {
       left: 50px;
       background-color: rgb(102, 94, 94);
 
+      h3 {
+        font-size: 1.4rem;
+        margin-left: 100px;
+        margin-top: 10px;
+        margin-bottom: 23px;
+      }
       input {
-        background-color: rgb(166, 166, 166);
+        background-color: #f0e686;
+        border: none;
+        border-bottom: 4px dotted #ef8457;
+        width: 200px;
+        font-family: 'Sacramento', cursive;
+        font-size: 1rem;
       }
 
       #close {
         position: absolute;
         left: 550px;
         top: 20px;
-        background-color: rgb(112, 112, 112);
+        font-weight: 700;
+        background-color: rgb(147, 108, 108);
       }
 
       form {
         display: flex;
         flex-direction: column;
+        margin-left: 40px;
 
-        input {
-          margin: 10px 0;
+        label {
+          font-weight: 700;
+          font-size: 1.4rem;
+          font-family: 'Sacramento', cursive;
+        }
+
+        .labelUserN {
+          margin-top: 20px;
+        }
+
+        #username {
+          margin-top: -1px;
+        }
+
+        .password1{
+          margin-top: 7px;
+        }
+
+        #password {
+          margin-top: -1px;
+        }
+
+        .password2 {
+          margin-top: 7px;
+        }
+
+        #password2 {
+          margin-top: 0px;
+          margin-bottom: 40px;
         }
       }
 

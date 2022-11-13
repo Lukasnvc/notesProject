@@ -15,8 +15,11 @@
 <body>
   <div class="all">
     <header>
+      <div class="logo">
       <h1><i class="fa-solid fa-pen-clip"></i>  Notes </h1>
       <p>by Lukas</p>
+    </div>
+    <span id="userCount">Registered users</span>
     </header>
     <div id="login">
       <form id="Login">
@@ -33,11 +36,11 @@
       <button id="close">X</button>
       <h3 id="registerH3">Welcome new user, please register</h3>
       <form id="forLogin">
-        <label for="username">User name</label>
+        <label for="username" class="labelUserN">User name</label>
           <input type="text" name="username" id="username">
-        <label for="password">Password</label>
+        <label for="password" class="password1">Password</label>
           <input type="text" name="password" id="password">
-          <label for="password2">Repeat Password</label>
+          <label for="password2" class="password2">Repeat Password</label>
           <input type="text" name="password2" id="password2">
         <button id="submit">Register</button>
       </form>
