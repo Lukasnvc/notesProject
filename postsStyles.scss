@@ -1,112 +1,130 @@
 body {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
   background-color:rgb(57, 52, 52);
 
-  header {
-    margin: none;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(107, 107, 107);
-    padding-bottom: 20px;
-
-    h2 {
-      margin: 20px;
-    }
-    #newPostBtn {
-      background-color: rgb(105, 105, 224);
-      color: white;
-      border: 1px solid black;
-      border-bottom-right-radius: 20px;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
-
-    #logout {
-      background-color: rgb(243, 140, 140);
-      padding: 0 20px;
-      color: white;
-      border: 1px solid black;
-      border-bottom-left-radius: 20px;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
-  #newpost {
-    display: none;
-    padding: 40px;
-    position: relative;
-    background-color: rgb(185, 155, 155);
-    border-radius: 10px;
-    
-
-    #close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      text-align: center;
-      margin: 0;
-      margin-bottom: 30px;
-    }
-
-    form {
+    header {
+      margin: none;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      background-color: rgb(107, 107, 107);
+      padding-bottom: 20px;
 
-      #newPost {
-        height: 100px;
+      h2 {
+        margin: 10px;
+    
       }
 
-      #submit {
+      p {
+        margin: 0px;
+        text-align: center;
+      }
+      #newPostBtn {
         background-color: rgb(105, 105, 224);
         color: white;
-        font-size: 1.3rem;
-        padding: 20px;
-        margin-top: 10px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-      }
-    }
-  }
+        border: 1px solid black;
+        border-bottom-right-radius: 20px;
 
-  #posts {
-    padding: 30px;
-    display: grid;
-    grid-template-columns: 48% 48%;
-    gap: 4%;
-    margin: 0 auto;
-
-    .card {
-      position: relative;
-      margin-top: 10px;
-      padding: 40px;
-      background-color: whitesmoke;
-      border: 2px solid rgb(105, 105, 224);
-      border-radius: 5px;
-
-      .deleteBtn {
-        position: absolute;
-        bottom: 5px;
-        right: 5px;
-        background-color: rgb(243, 140, 140);
-        border: none;
-        border-radius: 5px;
-        color: white;
-        padding: 5px;
-        font-size: 0.6rem;
+        i {
+          font-size: 1.2rem;
+          margin-left: 5px;
+        }
 
         &:hover {
           cursor: pointer;
+          border: 1px solid white;
+        }
+      }
+
+      #logout {
+        background-color: rgb(243, 140, 140);
+        padding: 0 20px;
+        color: white;
+        border: 1px solid black;
+        border-bottom-left-radius: 20px;
+        
+        i {
+          font-size: 1.2rem;
+          margin-left: 5px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          border: 1px solid white;
         }
       }
     }
-  }
+    #newpost {
+      display: none;
+      padding: 40px;
+      position: relative;
+      background-color: rgb(185, 155, 155);
+      border-radius: 10px;
+      
+
+      #close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 30px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        #newPost {
+          height: 100px;
+        }
+
+        #submit {
+          background-color: rgb(105, 105, 224);
+          color: white;
+          font-size: 1.3rem;
+          padding: 20px;
+          margin-top: 10px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+      }
+    }
+
+    #posts {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 48% 48%;
+      gap: 4%;
+      margin: 0 auto;
+
+      .card {
+        position: relative;
+        margin-top: 10px;
+        padding: 40px;
+        background-color: whitesmoke;
+        border: 2px solid rgb(105, 105, 224);
+        border-radius: 5px;
+
+        .deleteBtn {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          background-color: rgb(243, 140, 140);
+          border: none;
+          border-radius: 5px;
+          color: white;
+          padding: 5px 10px;
+          font-size: 0.7rem;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
 }

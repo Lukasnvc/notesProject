@@ -47,7 +47,7 @@ const h3 = document.querySelector('#registerH3');
   loginBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    const user = loginUsername.value+loginPassword.value;
+    const user = `${loginUsername.value}|${loginPassword.value}`;
     data.forEach(element => {
       console.log(element.username)
       if (element.username===user){
@@ -110,7 +110,7 @@ const register = (valueUsername) => {
     e.preventDefault()
     let valueUsername
     if (password.value===password2.value) {
-    valueUsername= username.value + password.value;
+    valueUsername= `${username.value}|${password.value}`;
     console.log(valueUsername);
     register(valueUsername)
     registerForm.style.display= 'none';

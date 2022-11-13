@@ -7,14 +7,20 @@
   <title>Your Posts</title>
   <script defer src="scriptForPosts.js"></script>
   <link rel="stylesheet" href="postsStyles.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b423b1131d.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
   <header>
-    <button id="newPostBtn">Make a New Post</button>
-    <h2 id="h2">Here's Your Post's :)</h2>
-    <button id="logout">Logout</button>
+    <button id="newPostBtn">New Note <i class="fa-solid fa-notes-medical"></i></button>
+    <div>
+    <h2 id="h2">Here's All Your  Notes's</h2>
+    <p id="count"></p>
+  </div>
+    <button id="logout">Logout <i class="fa-solid fa-door-open"></i></button>
   </header>
  
   <div id="newpost">

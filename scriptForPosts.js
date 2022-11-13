@@ -6,6 +6,8 @@ const newPostBtn = document.querySelector('#newPostBtn');
 const h2 = document.querySelector('#h2');
 const logout = document.querySelector('#logout');
 const container = document.querySelector('#posts');
+const count = document.querySelector('#count');
+
 
 logout.addEventListener('click', () => {
   localStorage.clear();
@@ -95,7 +97,7 @@ users.forEach(element => {
 let index = 0;
 const draw = (user) => {
   const userPostsArr = JSON.parse(user.post) || []
-  
+  count.textContent =`Total Note's : ${userPostsArr.length}`;
   userPostsArr.forEach((element, index) => {
     const div = document.createElement('div');
     const deleteBtn = document.createElement('button');
@@ -105,8 +107,7 @@ const draw = (user) => {
     div.textContent=element;
     div.appendChild(deleteBtn)
     container.appendChild(div)
-    deleteBtn.addEventListener('click', () => {
-      
+    deleteBtn.addEventListener('click', () => { 
       deleteOne(index, user)
     })
   });
@@ -124,7 +125,8 @@ postBtn.addEventListener('click', (e) => {
   console.log('User posts in makePost :', allPosts, typeof allPosts, ', New post :', currentPost);
   postsArr.push(currentPost);
   const jsonPostsArr = JSON.stringify(postsArr)
-  sendUppdatedPosts(item.username, id, jsonPostsArr)
+  sendUppdatedPosts(item.username, id, jsonPostsArr);
+  newPost.textContent= '';
   postForm.style.display = 'none';
   newPostBtn.style.display = 'block';
 })

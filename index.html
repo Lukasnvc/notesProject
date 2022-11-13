@@ -7,36 +7,46 @@
   <title>Login to Your Notes</title>
   <script defer src="scriptForIndex.js"></script>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/b423b1131d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <h1>Your Notes</h1>
-    <p>by Lukas</p>
-  </header>
-  <div id="login">
-    <form id="Login">
-      <label for="username1">User name :</label>
-        <input type="text" name="username1" id="usernameLogin">
-      <label for="password1">Password :</label>
-        <input type="text" name="password1" id="passwordLogin">
-      <button id="submit1">Login</button>
-      <button id="registerBtn">Register</button>
-      <h2 id="error"></h2>
-    </form>
-  </div>
-  <div id="register">
-    <button id="close">X</button>
-    <h3 id="registerH3">Welcome new user, please register</h3>
-    <form id="forLogin">
-      <label for="username">User name</label>
-        <input type="text" name="username" id="username">
-      <label for="password">Password</label>
-        <input type="text" name="password" id="password">
-        <label for="password2">Repeat Password</label>
-        <input type="text" name="password2" id="password2">
-      <button id="submit">Register</button>
-    </form>
+  <div class="all">
+    <header>
+      <h1><i class="fa-solid fa-pen-clip"></i>  Notes </h1>
+      <p>by Lukas</p>
+    </header>
+    <div id="login">
+      <form id="Login">
+        <label for="username1">User name :</label>
+          <input type="text" name="username1" id="usernameLogin">
+        <label for="password1">Password :</label>
+          <input type="password" name="password1" id="passwordLogin">
+        <button id="submit1">Login</button>
+        <button id="registerBtn">Register</button>
+        <h2 id="error"></h2>
+      </form>
+    </div>
+    <div id="register">
+      <button id="close">X</button>
+      <h3 id="registerH3">Welcome new user, please register</h3>
+      <form id="forLogin">
+        <label for="username">User name</label>
+          <input type="text" name="username" id="username">
+        <label for="password">Password</label>
+          <input type="text" name="password" id="password">
+          <label for="password2">Repeat Password</label>
+          <input type="text" name="password2" id="password2">
+        <button id="submit">Register</button>
+      </form>
+    </div>
+    <footer>
+      <p>by Lukas 2022 <a href="https://github.com/Lukasnvc"><i class="fa-brands fa-github"></i></a></p>
+    </footer>
   </div>
   
+ 
 </body>
 </html>

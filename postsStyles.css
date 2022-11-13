@@ -1,6 +1,6 @@
 body {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   background-color: rgb(57, 52, 52);
 }
 body header {
@@ -11,7 +11,11 @@ body header {
   padding-bottom: 20px;
 }
 body header h2 {
-  margin: 20px;
+  margin: 10px;
+}
+body header p {
+  margin: 0px;
+  text-align: center;
 }
 body header #newPostBtn {
   background-color: rgb(105, 105, 224);
@@ -19,8 +23,13 @@ body header #newPostBtn {
   border: 1px solid black;
   border-bottom-right-radius: 20px;
 }
+body header #newPostBtn i {
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
 body header #newPostBtn:hover {
   cursor: pointer;
+  border: 1px solid white;
 }
 body header #logout {
   background-color: rgb(243, 140, 140);
@@ -29,8 +38,13 @@ body header #logout {
   border: 1px solid black;
   border-bottom-left-radius: 20px;
 }
+body header #logout i {
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
 body header #logout:hover {
   cursor: pointer;
+  border: 1px solid white;
 }
 body #newpost {
   display: none;
@@ -83,14 +97,14 @@ body #posts .card {
 }
 body #posts .card .deleteBtn {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: 10px;
+  right: 10px;
   background-color: rgb(243, 140, 140);
   border: none;
   border-radius: 5px;
   color: white;
-  padding: 5px;
-  font-size: 0.6rem;
+  padding: 5px 10px;
+  font-size: 0.7rem;
 }
 body #posts .card .deleteBtn:hover {
   cursor: pointer;

@@ -1,61 +1,92 @@
-* {
-  margin: 0;
-}
-* body {
+body {
+  box-sizing: border-box;
+  height: 100vh;
   position: relative;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   background-color: rgb(112, 112, 112);
 }
-* body header {
+body .all {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .all header {
+  position: absolute;
+  top: -10px;
   display: flex;
   padding: 10px;
+  width: 100%;
   background-color: rgb(147, 108, 108);
+  border-bottom-left-radius: 40px;
 }
-* body header h1 {
-  margin-left: 10px;
+body .all header h1 {
+  margin-left: 50px;
   color: rgb(29, 29, 29);
 }
-* body header p {
+body .all header p {
   font-size: 0.6rem;
 }
-* body #login form {
-  margin: 30px 20px;
+body .all #login {
+  background-image: url("indexImg.png");
+  background-size: cover;
+  position: relative;
+  height: 400px;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
-* body #login input {
+body .all #login form {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+}
+body .all #login label {
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 500;
+}
+body .all #login input {
+  font-size: 1.4rem;
+  font-family: "Raleway", sans-serif;
+  font-style: italic;
   margin-right: 10px;
-  background-color: rgb(112, 112, 112);
+  background-color: #f0d7ab;
   border: none;
   border-bottom: 3px dotted rgb(96, 63, 63);
   width: 100px;
 }
-* body #login input:hover {
+body .all #login input:hover {
   cursor: text;
 }
-* body #login button {
+body .all #login #registerBtn {
+  border-radius: 5px;
+  border-top-right-radius: 20px;
+  background-color: rgb(137, 75, 75);
+  color: rgb(195, 195, 195);
+}
+body .all #login #error {
+  color: rgb(128, 3, 3);
+  padding: 20px;
+}
+body .all #login button {
   padding: 10px;
   margin: 10px;
+  margin-right: 0;
 }
-* body #login button:hover {
+body .all #login button:hover {
   cursor: pointer;
+  border: 2px solid rgb(253, 237, 237);
+  color: rgb(236, 236, 236);
 }
-* body #login #submit1 {
+body .all #login #submit1 {
   border-radius: 5px;
   border-bottom-left-radius: 20px;
   padding: 10px 20px;
   background-color: rgb(147, 108, 108);
   color: rgb(195, 195, 195);
 }
-* body #login #registerBtn {
-  border-radius: 5px;
-  border-top-right-radius: 20px;
-  background-color: rgb(137, 75, 75);
-  color: rgb(195, 195, 195);
-}
-* body #login #error {
-  color: rgb(128, 3, 3);
-  padding: 20px;
-}
-* body #register {
+body .all #register {
   display: none;
   width: 500px;
   position: absolute;
@@ -66,25 +97,46 @@
   left: 50px;
   background-color: rgb(102, 94, 94);
 }
-* body #register input {
+body .all #register input {
   background-color: rgb(166, 166, 166);
 }
-* body #register #close {
+body .all #register #close {
   position: absolute;
   left: 550px;
   top: 20px;
   background-color: rgb(112, 112, 112);
 }
-* body #register form {
+body .all #register form {
   display: flex;
   flex-direction: column;
 }
-* body #register form input {
+body .all #register form input {
   margin: 10px 0;
 }
-* body #register #submit {
+body .all #register #submit {
   padding: 20px;
   border-radius: 5px;
   background-color: rgb(147, 108, 108);
   font-size: 1.2rem;
+}
+body .all footer {
+  background-color: rgb(147, 108, 108);
+  padding: 5px;
+  width: 100%;
+  border-top-left-radius: 30px;
+}
+body .all footer p {
+  font-size: 0.7rem;
+  text-align: center;
+}
+body .all footer p a {
+  text-decoration: none;
+  color: rgb(29, 29, 29);
+}
+body .all footer p a:hover {
+  color: rgb(166, 166, 166);
+}
+body .all footer p a i {
+  font-size: 1.5rem;
+  margin-left: 5px;
 }/*# sourceMappingURL=styles.css.map */
