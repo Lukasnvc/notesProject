@@ -117,7 +117,7 @@ body .all #register h3 {
   font-size: 1.4rem;
   margin-left: 100px;
   margin-top: 10px;
-  margin-bottom: 23px;
+  margin-bottom: 27px;
 }
 body .all #register input {
   background-color: #f0e686;
@@ -151,13 +151,13 @@ body .all #register form #username {
   margin-top: -1px;
 }
 body .all #register form .password1 {
-  margin-top: 7px;
+  margin-top: 12px;
 }
 body .all #register form #password {
-  margin-top: -1px;
+  margin-top: 0px;
 }
 body .all #register form .password2 {
-  margin-top: 7px;
+  margin-top: 12px;
 }
 body .all #register form #password2 {
   margin-top: 0px;

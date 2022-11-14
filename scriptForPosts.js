@@ -7,6 +7,9 @@ const h2 = document.querySelector('#h2');
 const logout = document.querySelector('#logout');
 const container = document.querySelector('#posts');
 const count = document.querySelector('#count');
+const deleteAccount = document.querySelector('#deleteAccount');
+const deleteQuestion = document.querySelector('#deleteQuestion');
+
 
 
 logout.addEventListener('click', () => {
@@ -23,8 +26,6 @@ close.addEventListener('click', () => {
   postForm.style.display = 'none';
   newPostBtn.style.display = 'block';
 })
-
-
 
 const getData = () => {
   fetch('https://testapi.io/api/lukasnvc/resource/NotesProject',
@@ -49,7 +50,6 @@ const getData = () => {
   filter(data)
 })
 }
-
 getData()
 
 const sendUppdatedPosts = (name, id, posts) => {
@@ -74,13 +74,29 @@ fetch(`https://testapi.io/api/lukasnvc/resource/NotesProject/${id}`,
   console.log('Fetching data : ', result);
   container.replaceChildren()
   getData()
+  newPost.value= '';
 })
 }
+
 
 const arr = JSON.parse(localStorage.getItem('user'));
 const lastIndex = arr.length;
 const id = arr[lastIndex-1];
 console.log('User id :', id)
+
+
+  deleteAccount.addEventListener('click', () => {
+    deleteQuestion.style.display = 'block'
+    const yes = document.querySelector('#yes');
+    const no = document.querySelector('#no');
+    no.addEventListener('click', () => {
+      deleteQuestion.style.display = 'none'
+    })
+    yes.addEventListener('click', () => {
+      deleteUser(id);
+    })
+  })
+  
 
 
 const filter = (users) => {
@@ -120,13 +136,12 @@ postBtn.addEventListener('click', (e) => {
   const allPosts = item.post;
   
   const currentPost = newPost.value;
-
   const postsArr = JSON.parse(item.post) || []
   console.log('User posts in makePost :', allPosts, typeof allPosts, ', New post :', currentPost);
   postsArr.push(currentPost);
   const jsonPostsArr = JSON.stringify(postsArr)
   sendUppdatedPosts(item.username, id, jsonPostsArr);
-  newPost.textContent= '';
+ 
   postForm.style.display = 'none';
   newPostBtn.style.display = 'block';
 })
@@ -138,4 +153,22 @@ const deleteOne = (index, item) => {
   const jsonPostsArr = JSON.stringify(postsArr)
   sendUppdatedPosts(item.username, id, jsonPostsArr)
   
+}
+
+const deleteUser = (id) => {
+  console.log(id)
+  fetch(`	https://testapi.io/api/lukasnvc/resource/NotesProject/${id}`,
+  {
+    method: 'DELETE',
+    headers: {
+      'Content-Type':
+      'application/json'
+    }
+  })
+  .then((response) => {
+    if (response.ok) {
+      localStorage.clear();
+      location.href = 'index.html';
+    }
+  })
 }

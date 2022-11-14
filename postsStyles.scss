@@ -1,59 +1,63 @@
 body {
-  box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
-  background-color:rgb(57, 52, 52);
+margin: 0;
+font-family: 'Raleway', sans-serif;
+background-color:rgb(57, 52, 52);
+position: relative;
 
-    header {
-      margin: none;
-      display: flex;
-      justify-content: space-between;
-      background-color: rgb(107, 107, 107);
-      padding-bottom: 20px;
+  header {
+    margin: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(107, 107, 107);
+    padding-bottom: 20px;
 
-      h2 {
-        margin: 10px;
-    
+    h2 {
+      margin: 10px;
+  
+    }
+
+    p {
+      margin: 0px;
+      text-align: center;
+    }
+    #newPostBtn {
+      background-color: rgb(105, 105, 224);
+      color: white;
+      border: 1px solid black;
+      border-bottom-right-radius: 20px;
+
+      i {
+        font-size: 1.2rem;
+        margin-left: 5px;
       }
 
-      p {
-        margin: 0px;
-        text-align: center;
-      }
-      #newPostBtn {
-        background-color: rgb(105, 105, 224);
-        color: white;
-        border: 1px solid black;
-        border-bottom-right-radius: 20px;
-
-        i {
-          font-size: 1.2rem;
-          margin-left: 5px;
-        }
-
-        &:hover {
-          cursor: pointer;
-          border: 1px solid white;
-        }
-      }
-
-      #logout {
-        background-color: rgb(243, 140, 140);
-        padding: 0 20px;
-        color: white;
-        border: 1px solid black;
-        border-bottom-left-radius: 20px;
-        
-        i {
-          font-size: 1.2rem;
-          margin-left: 5px;
-        }
-
-        &:hover {
-          cursor: pointer;
-          border: 1px solid white;
-        }
+      &:hover {
+        cursor: pointer;
+        border: 1px solid white;
       }
     }
+
+    #logout {
+      background-color: rgb(243, 140, 140);
+      padding: 0 20px;
+      color: white;
+      border: 1px solid black;
+      border-bottom-left-radius: 20px;
+      
+      i {
+        font-size: 1.2rem;
+        margin-left: 5px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid white;
+      }
+    }
+  }
+  main {
+
+    margin-bottom: 100px;
     #newpost {
       display: none;
       padding: 40px;
@@ -127,4 +131,93 @@ body {
         }
       }
     }
-}
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(107, 107, 107);
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px;
+
+    p {
+      margin: 0 20px;
+      font-size: 0.5rem;
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        color: rgb(29, 29, 29);
+
+        &:hover {
+          color: rgb(166, 166, 166);
+        }
+
+        i {
+          font-size: 1.5rem;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    #deleteAccount {
+      background-color: rgb(243, 140, 140);
+      border: none;
+      border-radius: 5px;
+      color: rgb(29, 29, 29);
+      padding: 2px 6px;
+      font-size: 0.6rem;
+      margin: 0 30px;
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+        color: white;
+        border: 1px solid white;
+      }
+    }
+
+    #deleteQuestion {
+      display: none;
+      position:absolute;
+      bottom: 30px;
+      right: 110px;
+      z-index: 99;
+      border: 1px solid black;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      border-bottom-left-radius: 50px;
+      background-color: rgb(243, 140, 140);
+      padding: 20px;
+      width: 300px;
+
+      #yes {
+        background-color: red;
+        padding: 5px 10px;
+        color: white;
+        margin-left: 20px;
+        border-radius: 5px;
+
+        &:hover {
+          cursor: pointer;
+          color: black;
+          border: 1px solid white;
+        }
+      }
+      #no {
+        background-color: rgb(105, 105, 224);
+        padding: 5px 20px;
+        color: white;
+        margin-left: 10px;
+        border-radius: 5px;
+        &:hover {
+          cursor: pointer;
+          color: black;
+          border: 1px solid white;
+        }
+      }
+    
+    }
+  }
+} 
